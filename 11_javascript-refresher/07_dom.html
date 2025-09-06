@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+        }
+
+        button{
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        p{
+            margin-top: auto;
+            font-weight: bold;
+        }
+    </style>
+
+  <button onclick="changeBackground()">Change Background</button>
+
+  <p id="colorDisplay"></p>
+
+  <p id="timeoutMessage"></p>
+
+  <script>
+    function changeBackground() {
+      document.body.style.backgroundColor = "lightblue"; 
+    }
+    let favoriteColor = prompt("What is your favorite color?");
+    document.getElementById("colorDisplay").innerText = `Your favorite color is ${favoriteColor}.`;
+    
+    setTimeout(() => {
+      document.getElementById("timeoutMessage").innerText = "This message appears after 2 seconds.";
+    }, 2000);
+  </script>
+
+</body>
+</head>
+</html>
