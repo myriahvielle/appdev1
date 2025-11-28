@@ -4,10 +4,12 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import Gallery from './Gallery.js';
+import { Profile } from './Gallery.js';
 
 export default function App() {
   return (
-    <Gallery />
+    <Profile />
   );
 }
+
 
